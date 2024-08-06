@@ -1,0 +1,20 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+/* Global styles */
+body {
+    font: 12pt Arial;
+}
+
+/* Heading styles using imported font */
+h1, h2, h3 {
+    font-family: 'Pacifico', cursive;
+    font-weight: bolder;
+    font-size: 55px;
+}
+
+/* Button styles */
+button {
+    font-size: 12pt;
+    padding: 10px 20px; /* Adjust padding as needed */
+}
