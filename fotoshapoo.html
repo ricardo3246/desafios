@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shampoo Primavera</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, yellow, green, black);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .content {
+            margin-top: 30px;
+        }
+
+        .image-container {
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 300px;
+            height: auto;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+        /* Rodapé */
+        footer {
+            position: fixed;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shampoo Primavera</h1>
+        <p>Bom para Cabelos Cacheados</p>
+    </header>
+
+    <section class="content">
+        <h2>Descubra a leveza e o cuidado com seu cabelo</h2>
+        <p>Nosso shampoo é especialmente formulado para hidratar e definir seus cachos, mantendo a vitalidade natural dos seus cabelos.</p>
+        
+        <!-- Área para a imagem do shampoo -->
+        <div class="image-container">
+            <img id="shampooImage" src="shampoo_front.png" alt="Frente do Shampoo Primavera">
+        </div>
+
+        <button id="trocarBtn">Trocar Imagem</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Primavera. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript para trocar entre a imagem da frente e do verso do shampoo
+        const shampooImage = document.getElementById('shampooImage');
+        const trocarBtn = document.getElementById('trocarBtn');
+
+        let showingFront = true;
+
+        trocarBtn.addEventListener('click', () => {
+            if (showingFront) {
+                shampooImage.src = 'shampoo_back.png'; // Mostra o verso
+                shampooImage.alt = 'Verso do Shampoo Primavera';
+            } else {
+                shampooImage.src = 'shampoo_front.png'; // Mostra a frente
+                shampooImage.alt = 'Frente do Shampoo Primavera';
+            }
+            showingFront = !showingFront;
+        });
+    </script>
+</body>
+</html>
